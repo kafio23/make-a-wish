@@ -3,12 +3,27 @@
   <head>
     <title>MakeAWish</title>
     <%= csrf_meta_tags %>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="ui teal three item inverted menu">
+      <a class="item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item active">
+        Friends
+      </a>
+    </div>
+    <div class="main ui container">
+      <%= yield %>
+    </div>  
   </body>
 </html>

@@ -1,0 +1,131 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wishes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>Answer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wishes.each do |wish| %>
+      <tr>
+        <td><%= wish.name %></td>
+        <td><%= wish.description %></td>
+        <td><%= wish.date %></td>
+        <td><%= wish.status %></td>
+        <td><%= wish.answer %></td>
+        <td><%= link_to 'Show', wish %></td>
+        <td><%= link_to 'Edit', edit_wish_path(wish) %></td>
+        <td><%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div >
+  <table class="ui unstackable table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Answer</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @wishes.each do |wish| %>
+        <tr>
+          <td><%= wish.name %></td>
+          <td><%= wish.description %></td>
+          <td><%= wish.date %></td>
+          <td><%= wish.status %></td>
+          <td><%= wish.answer %></td>
+          <td><%= link_to 'Show', wish %></td>
+          <td><%= link_to 'Edit', edit_wish_path(wish) %></td>
+          <td><%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="ui vertically divided grid">
+  <div class="two column row">
+    <div class="column">
+      <img src="https://react.semantic-ui.com/images/wireframe/paragraph.png" class="ui image"/>
+    </div>
+    <div class="column">
+      <img src="https://react.semantic-ui.com/images/wireframe/paragraph.png" class="ui image"/>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<table class="ui teal unstackable table">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  <thead>
+  <tbody>
+    <tr>
+      <td>jajs</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="ui segment">
+  <div class="ui left mini rail">
+    Mini
+  </div>
+  <div class="ui right tiny rail">
+    Tiny
+  </div>
+  <p></p>
+  <p></p>
+</div>
+<div class="ui segment">
+  <div class="ui left small rail">
+    Small
+  </div>
+  <div class="ui right large rail">
+    Large
+  </div>
+  <p></p>
+  <p></p>
+</div>
+<div class="ui segment">
+  <div class="ui left big rail">
+    Big
+  </div>
+  <div class="ui right huge rail">
+    Huge
+  </div>
+  <p></p>
+  <p></p>
+</div>
+<div class="ui segment">
+  <div class="ui right massive rail">
+    Massive
+  </div>
+  <p></p>
+  <p></p>
+</div>
+
+<br>
+
+<%= link_to 'New Wish', new_wish_path %>
