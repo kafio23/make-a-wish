@@ -12,14 +12,10 @@
 
   <body>
     <div class="ui teal three item inverted menu">
-      <a class="item active">
-        Home
-      </a>
+      <%= link_to 'All', wishes_path, {:class => "item active"} %>
+      <%= link_to 'Answered', answered_wishes_path, {:class => "item"} %>
       <a class="item">
-        Messages
-      </a>
-      <a class="item">
-        Friends
+        Family
       </a>
     </div>
     <div class="main ui container">

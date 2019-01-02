@@ -7,6 +7,10 @@ class WishesController < ApplicationController
     @wishes = Wish.all
   end
 
+  def answered_index
+    @wishes = Wish.all
+  end
+
   # GET /wishes/1
   # GET /wishes/1.json
   def show
