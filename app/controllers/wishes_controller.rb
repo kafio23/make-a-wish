@@ -8,7 +8,7 @@ class WishesController < ApplicationController
   end
 
   def answered_index
-    @wishes = Wish.all
+    @wishes = Wish.all.answered
   end
 
   # GET /wishes/1
