@@ -1,4 +1,6 @@
-# README
+# Make A Wish
+
+This and Ruby on Rails app with...
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -14,8 +16,14 @@ Things you may want to cover:
 
 `gem install bundler`
 
-`cd make-a-wish`
-`rails s`
+### Adding React
+
+1. Add `gem 'react-rails'` to Gemfile
+
+`bundle install`
+
+`rails g react:install`
+
 
 
 * System dependencies
@@ -27,6 +35,16 @@ Things you may want to cover:
 * Database initialization
 
 * How to run the test suite
+
+### Installation
+
+1. Get de App
+
+`cd make-a-wish`
+
+`bundle install`
+
+`rails s`
 
 * Services (job queues, cache servers, search engines, etc.)
 

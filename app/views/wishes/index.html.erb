@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="ui center aligned header">2018</h1>
+<div class="ui divider"></div>
+<br>
+
+<div class="ui two column stackable grid">
+
+  <div class="column">
+    <h1>All Prayers</h1>
+    <table class="ui teal unstackable table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Action</th>
+        </tr>
+      <thead>
+      <tbody>
+        <% @wishes.each do |wish| %>
+          <tr>
+            <td><%= wish.id %></td>
+            <td><%= wish.name %></td>
+            <td>Edit&nbsp;<i class="teal edit icon"></i></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="column">
+    <h1>Answered Prayers</h1>
+    <table class="ui teal unstackable table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Action</th>
+        </tr>
+      <thead>
+      <tbody>
+        <% @wishes.each do |wish| %>
+          <tr>
+            <td><%= wish.id %></td>
+            <td><%= wish.name %></td>
+            <td>Edit&nbsp;<i class="teal edit icon"></i></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+
+<br>
+
+<%= link_to 'New Prayer', new_wish_path %>&nbsp;<i class="blue add icon"></i>
