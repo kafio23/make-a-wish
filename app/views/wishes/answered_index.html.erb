@@ -25,7 +25,11 @@
                 <div class="ui sub header">Molly</div>
               </div>
             </td>
-            <td>Edit&nbsp;<i class="teal edit icon"></i></td>
+            <td>
+              <%= link_to edit_wish_path(wish) do%> Edit
+                <i class="teal edit icon"></i>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </tbody>
