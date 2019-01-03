@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="ui segments">
+  <% @users.each do |user| %>
+    <div class="ui segment">
+      <div class="content">
+        <div class="ui header"><i class="teal user icon"></i><%= user.name %></div>
+        <%= user.email %>
+      </div>
+    </div>
+    <div class="ui secondary segment">
+      <%= link_to 'Edit', edit_user_path(user), class: "ui teal button" %>
+      <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui red button"  %>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>&nbsp;<i class="blue add icon"></i>

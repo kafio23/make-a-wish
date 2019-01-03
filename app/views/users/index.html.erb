@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div class="ui segments">
+  <% @users.each do |user| %>
+    <div class="ui segment">
+      <div class="content">
+        <div class="ui header"><i class="teal user icon"></i><%= user.name %></div>
+        <%= user.email %>
+      </div>
+    </div>
+    <div class="ui secondary segment">
+      <%= link_to 'Edit', edit_user_path(user), class: "ui teal button" %>
+      <%= link_to 'Log Out', logout_path, class: "ui orange button" %>
+      <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui red button"  %>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>&nbsp;<i class="blue add icon"></i>
