@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  root 'wishes#index'
   # get 'sessions/new'
 
   # get 'sessions/create'

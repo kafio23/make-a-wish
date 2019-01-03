@@ -1,4 +1,12 @@
-<p id="alert"><%= alert %></p>
+<% if flash[:alert] %>
+  <div class="ui negative message">
+    <i class="close icon"></i>
+    <div class="header">
+        <%= alert %>
+    </div>
+  </div>
+<% end %>
+
 <h1>Login</h1>
 <%= form_tag sessions_path do |form| %>
   <div class="field">
