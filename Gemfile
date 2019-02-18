@@ -33,6 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'react-rails'
 # Use Webpacker: https://github.com/reactjs/react-rails
 gem 'webpacker'
+gem 'slim-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
