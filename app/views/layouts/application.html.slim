@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title MakeAWish
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = javascript_pack_tag 'application'
+
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+  body
+    div class="ui teal three item inverted menu"
+      = link_to 'All', wishes_path, {:class => "item active"}
+      = link_to 'Answered', answered_wishes_path, {:class => "item"}
+      
+      - if current_user
+        = link_to 'Family', users_path, {:class => "item"}
+      - else
+        = link_to 'Log In', login_path, {:class => "item"}
+
+    div class="main ui container"
+      = yield

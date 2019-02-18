@@ -1,0 +1,38 @@
+p id="notice"
+  = notice
+
+h1 class="ui center aligned header" 2018
+div class="ui divider"
+br
+
+div class="ui two column stackable grid"
+
+  div class="column"
+    h1 All Prayers
+    table class="ui teal unstackable table"
+      thead
+        tr
+          th #
+          th Name
+          th Action
+      
+      thead
+      tbody
+        - @wishes.each do |wish|
+          tr
+            td 
+              = wish.id
+            td 
+              = wish.name
+              div class="content"
+                div class="ui sub header"
+                  Molly
+            td
+              Edit&nbsp;
+              i class="teal edit icon"
+
+br
+
+= link_to new_wish_path do 
+  |New Prayer&nbsp;
+  i class="blue add icon"
